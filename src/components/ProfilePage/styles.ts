@@ -24,7 +24,7 @@ export const Banner = styled.div`
 
 export const Avatar = styled.div`
   position: absolute;
-  bottom: max(-60px, -10vh);
+  bottom: max(-60px, -10vw);
   left: 15px;
   width: max(45px, min(135px, 22vw));
   height: max(45px, min(135px, 22vw));
