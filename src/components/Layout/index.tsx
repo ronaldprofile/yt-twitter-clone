@@ -8,7 +8,7 @@ export function Layout() {
   return (
     <Container>
       <Wrapper>
-        {/* <MenuBar /> */}
+        <MenuBar />
         <Main />
         {/* <Sidebar /> */}
       </Wrapper>
