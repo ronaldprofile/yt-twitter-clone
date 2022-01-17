@@ -10,7 +10,7 @@ export function Layout() {
       <Wrapper>
         <MenuBar />
         <Main />
-        {/* <Sidebar /> */}
+        <Sidebar />
       </Wrapper>
     </Container>
   );
