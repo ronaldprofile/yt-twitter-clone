@@ -11,16 +11,19 @@ export const Button = styled.button<ButtonProps>`
   border-radius: 25px;
   border: 0;
 
-  background: ${props => (props.outlined ? "transparent" : "var(--twitter)")};
-  color: ${props => (props.outlined ? "var(--twitter)" : "var(--white)")};
-  border: ${props => (props.outlined ? "1px solid var(--twitter)" : "none")};
+  background: ${props =>
+    props.outlined ? "transparent" : "var(--button-tweet)"};
+  color: ${props =>
+    props.outlined ? "var(--button-tweet-outlined)" : "var(--white)"};
+  border: ${props =>
+    props.outlined ? "1px solid var(--button-outlined-border)" : "none"};
   cursor: pointer;
   transition: background 0.2s;
 
   &:hover {
     background: ${props =>
       props.outlined
-        ? "var(--twitter-dark-hover)"
-        : "var(--twitter-light-hover)"};
+        ? "var(--button-tweet-outlined-hover)"
+        : "var(--button-tweet-hover)"};
   }
 `;
