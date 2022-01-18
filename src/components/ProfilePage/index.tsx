@@ -20,14 +20,14 @@ export function ProfilePage() {
       </Banner>
 
       <ProfileData>
-        <EditProfile outlined>Editar perfil</EditProfile>
+        <EditProfile outlined>Edit profile</EditProfile>
 
-        <h1>Ronald Tomaz</h1>
-        <h2>@ronaldtomaz_</h2>
+        <strong>Ronald Tomaz</strong>
+        <span>@ronaldtomaz_</span>
 
         <p>
           Developer at
-          <a href="#"> @Rocketseat</a>
+          <a href="#"> @Ifood</a>
         </p>
 
         <ul>
@@ -43,14 +43,14 @@ export function ProfilePage() {
         </ul>
 
         <Followage>
-          <span>
-            Seguindo
-            <strong> 200</strong>
-          </span>
-          <span>
-            <strong>200 </strong>
-            Seguidores
-          </span>
+          <a href="#">
+            <strong>13 </strong>
+            Following
+          </a>
+          <a href="#">
+            <strong>0 </strong>
+            Followers
+          </a>
         </Followage>
       </ProfileData>
 

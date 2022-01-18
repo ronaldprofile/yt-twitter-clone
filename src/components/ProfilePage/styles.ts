@@ -8,7 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
 
   overflow-y: auto;
-  scrollbar-width: none; // firefox
+  scrollbar-width: none;
   ::-webkit-scrollbar {
     display: none;
   }
@@ -19,7 +19,7 @@ export const Banner = styled.div`
   position: relative;
   flex-shrink: 0;
   height: min(33vw, 199px);
-  background: var(--twitter);
+  background: var(--outline);
 `;
 
 export const Avatar = styled.div`
@@ -31,12 +31,17 @@ export const Avatar = styled.div`
 
   border: 3.75px solid var(--primary);
   border-radius: 50%;
+  cursor: pointer;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     clip-path: circle();
+    transition: filter 0.2s;
+    &:hover {
+      filter: brightness(0.9);
+    }
   }
 `;
 
@@ -47,15 +52,16 @@ export const ProfileData = styled.div`
   display: flex;
   flex-direction: column;
 
-  h1 {
-    font-size: 19px;
-    font-weight: bold;
+  strong {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-d9);
   }
 
-  h2 {
+  span {
     font-size: 15px;
     font-weight: normal;
-    color: var(--gray);
+    color: var(--gray-7d);
   }
 
   p {
@@ -80,11 +86,11 @@ export const ProfileData = styled.div`
       display: flex;
       align-items: center;
       font-size: 15px;
-      color: var(--gray);
+      color: var(--gray-7d);
 
       svg {
         margin-right: 5px;
-        fill: var(--gray);
+        fill: var(--gray-7d);
       }
     }
   }
@@ -96,7 +102,8 @@ export const EditProfile = styled(Button)`
   position: absolute;
   top: 2vw;
   right: 7px;
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 700;
 
   @media (min-width: 320px) {
     padding: 10px 19px;
@@ -122,13 +129,25 @@ export const CakeIcon = styled(Cake)`
 
 export const Followage = styled.div`
   display: flex;
+  align-items: center;
+  gap: 16px;
 
-  > span {
+  a,
+  strong {
     font-size: 15px;
-    color: var(--gray);
+  }
 
-    & + span {
-      margin-left: 20px;
+  > a {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--gray-d9);
+
+    strong {
+      color: var(--gray-7d);
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 `;
