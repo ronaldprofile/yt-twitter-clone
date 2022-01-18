@@ -10,9 +10,21 @@ export const GlobalStyles = createGlobalStyle`
     --outline: #2F3336;
     --retweet: #00C06B;
     --like: #E8265E;
+    
+    --gray-7d: #6e767d;
+    --gray-d9: #d9d9d9;
     --twitter: #33A1F2;
     --twitter-dark-hover: #011017;
     --twitter-light-hover: #2C8ED6;
+    --twitter-menubar-hover: rgba(217,217,217, 0.1);
+
+    --button-color: #ffffff;
+    --button-tweet: #7856ff;
+    --button-tweet-hover: #6c4de6;
+
+    --button-tweet-outlined: #eff3f4;
+    --button-tweet-outlined-hover: rgba(239, 243, 244, 0.1);
+    --button-outlined-border: rgb(83, 100, 113);
   }
   
   
