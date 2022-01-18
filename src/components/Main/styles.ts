@@ -41,15 +41,15 @@ export const Header = styled.div`
     transition: background 0.2s;
 
     &:hover {
-      background: var(--twitter-dark-hover);
+      background: var(--button-tweet-outlined-hover);
     }
   }
 `;
 
 export const BackIcon = styled(ArrowLeft)`
-  width: 24px;
-  height: 24px;
-  fill: var(--twitter);
+  width: 20px;
+  height: 20px;
+  fill: var(--button-tweet-outlined);
 `;
 
 export const ProfileInfo = styled.div`
@@ -59,12 +59,12 @@ export const ProfileInfo = styled.div`
   flex-direction: column;
 
   > strong {
-    font-size: 19px;
+    font-size: 20px;
   }
 
   > span {
-    font-size: 15px;
-    color: var(--gray);
+    font-size: 13px;
+    color: var(--gray-7d);
   }
 `;
 
