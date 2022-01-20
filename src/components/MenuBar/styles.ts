@@ -1,12 +1,14 @@
 import styled, { css } from "styled-components";
 import {
   Home,
+  Hashtag,
   Notifications,
   Email,
+  Bookmark,
   FavoriteBorder,
   Person,
-  ExitToApp,
-  Rocketseat
+  MoreCircle,
+  MoreHorizontal
 } from "../../styles/icons";
 
 export const Container = styled.div`
@@ -14,7 +16,7 @@ export const Container = styled.div`
 
   @media (min-width: 500px) {
     max-height: 100vh;
-    padding: 9px 19px 20px;
+    padding: 0 12px;
     position: sticky;
     top: 0;
     left: 0;
@@ -26,7 +28,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Topside = styled.div`
+export const Topside = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,61 +36,8 @@ export const Topside = styled.div`
   @media (min-width: 1280px) {
     align-items: flex-start;
   }
-`;
 
-export const Logo = styled(Rocketseat)`
-  margin-bottom: 20px;
-  width: 41px;
-  height: 41px;
-
-  path {
-    fill: var(--twitter);
-  }
-`;
-
-export const MenuButton = styled.button`
-  padding: 8.25px 0;
-  display: flex;
-  align-items: center;
-
-  flex-shrink: 0;
-  outline: 0;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background 0.2s;
-
-  &:hover {
-    background: var(--twitter-dark-hover);
-  }
-
-  &:hover,
-  &.active {
-    span,
-    svg {
-      color: var(--twitter);
-      fill: var(--twitter);
-    }
-  }
-  > span {
-    display: none;
-  }
-
-  @media (min-width: 1280px) {
-    padding-right: 15px;
-
-    > span {
-      margin-left: 19px;
-      display: inline;
-      font-size: 19px;
-      font-weight: bold;
-    }
-  }
-
-  & + button {
-    margin-top: 16.5px;
-  }
-
-  & + button:last-child {
+  button:last-child {
     margin-top: 33px;
     width: 40px;
     height: 40px;
@@ -102,7 +51,72 @@ export const MenuButton = styled.button`
       height: unset;
       > span {
         display: inline;
+
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--button-color);
       }
+    }
+  }
+`;
+
+export const Nav = styled.nav``;
+
+export const Logo = styled.div`
+  margin-bottom: 20px;
+  width: 52px;
+  height: 52px;
+  transition: background 0.2s;
+  cursor: pointer;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: var(--twitter-dark-hover);
+  }
+`;
+
+export const MenuButton = styled.a`
+  padding: 8.25px 0;
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+  outline: 0;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: var(--twitter-menubar-hover);
+  }
+
+  &.active {
+    span {
+      font-weight: 700;
+    }
+  }
+
+  > span {
+    display: none;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 12px;
+
+    > span {
+      margin-left: 20px;
+      margin-right: 16px;
+      display: inline;
+
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 400;
+
+      color: var(--gray-d9);
     }
   }
 `;
@@ -111,29 +125,53 @@ const iconStyles = css`
   width: 30px;
   height: 30px;
   flex-shrink: 0;
-  color: var(--white);
+  color: var(--gray-d9);
 `;
 
 export const HomeIcon = styled(Home)`
   ${iconStyles}
 `;
+
+export const ExploreIcon = styled(Hashtag)`
+  ${iconStyles}
+`;
+
 export const BellIcon = styled(Notifications)`
   ${iconStyles}
 `;
+
 export const EmailIcon = styled(Email)`
   ${iconStyles}
 `;
+
+export const BookmarkIcon = styled(Bookmark)`
+  ${iconStyles}
+`;
+
 export const FavoriteIcon = styled(FavoriteBorder)`
   ${iconStyles}
 `;
+
 export const ProfileIcon = styled(Person)`
   ${iconStyles}
 `;
 
+export const MoreCircleIcon = styled(MoreCircle)`
+  ${iconStyles}
+`;
+
 export const BottomSide = styled.div`
-  margin-top: 20px;
+  margin: 12px 0;
+  padding: 12px;
   display: flex;
   align-items: center;
+
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.2s;
+  &:hover {
+    background: var(--twitter-menubar-hover);
+  }
 `;
 
 export const Avatar = styled.div`
@@ -152,7 +190,7 @@ export const ProfileData = styled.div`
     margin-left: 10px;
     display: flex;
     flex-direction: column;
-    font-size: 14px;
+    font-size: 15px;
 
     > span {
       color: var(--gray);
@@ -160,26 +198,16 @@ export const ProfileData = styled.div`
   }
 `;
 
-export const ExitToAppIcon = styled(ExitToApp)`
+export const MoreOptions = styled(MoreHorizontal)`
   display: none;
 
   @media (min-width: 1280px) {
     display: inline-block;
     margin-left: 30px;
-    width: 25px;
-    height: 25px;
+    width: 38px;
+    height: 38px;
 
-    color: var(--white);
+    color: var(--gray-d9);
     cursor: pointer;
-
-    path {
-      transition: color 0.2s;
-    }
-
-    &:hover {
-      path {
-        color: var(--like);
-      }
-    }
   }
 `;
