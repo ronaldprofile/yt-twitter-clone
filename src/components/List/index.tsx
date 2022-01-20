@@ -8,9 +8,7 @@ type ListProps = {
 export function List({ title, elements }: ListProps) {
   return (
     <Container>
-      <Item>
-        <Title>{title}</Title>
-      </Item>
+      <Title>{title}</Title>
 
       {elements.map((element, index) => (
         <Item key={index}>{element}</Item>

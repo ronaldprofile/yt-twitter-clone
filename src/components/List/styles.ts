@@ -6,16 +6,10 @@ export const Container = styled.div`
 
   background: var(--secondary);
   border-radius: 14px;
-
-  cursor: pointer;
 `;
 
 export const Item = styled.div`
   padding: 10px 16px;
-
-  & + div {
-    border-top: 1px solid var(--outline);
-  }
 
   &:first-child {
     margin-top: 13px;
@@ -24,9 +18,15 @@ export const Item = styled.div`
   &:last-child {
     margin-bottom: 17px;
   }
+  cursor: pointer;
+  transition: background 0.2s;
+  &:hover {
+    background: var(--sidebar-item-hover);
+  }
 `;
 
 export const Title = styled.span`
-  font-size: 19px;
+  padding: 12px 16px;
+  font-size: 20px;
   font-weight: bold;
 `;
