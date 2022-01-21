@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle`
     --primary: #000;
     --secondary: #15181C;
     --search: #202327;
-    --white: #D9D9D9;
+    
     --gray: #7A7A7A;
     --outline: #2F3336;
     --retweet: #00C06B;
@@ -18,9 +18,19 @@ export const GlobalStyles = createGlobalStyle`
     --twitter-light-hover: #2C8ED6;
     --twitter-menubar-hover: rgba(217,217,217, 0.1);
 
+    --sidebar-item-hover: rgba(255, 255, 255, 0.03);
+
+    --button-follow-color: #0f1419;
+    --button-follow-hover: #d7dbdc;
+
     --button-color: #ffffff;
     --button-tweet: #7856ff;
     --button-tweet-hover: #6c4de6;
+
+    --button-unfollow-color: #f4212e;
+    --button-unfollow-background: rgba(244, 33, 46, 0.1);
+    --button-unfollow-border-color: rgb(103, 7, 15 );
+
 
     --button-tweet-outlined: #eff3f4;
     --button-tweet-outlined-hover: rgba(239, 243, 244, 0.1);
@@ -32,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--white);
+    color: var(--gray-d9);
   }
 
 
