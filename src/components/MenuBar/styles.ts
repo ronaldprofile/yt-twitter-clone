@@ -49,6 +49,10 @@ export const Topside = styled.header`
     @media (min-width: 1280px) {
       width: 100%;
       height: unset;
+      &:hover {
+        background: var(--button-tweet-hover);
+      }
+
       > span {
         display: inline;
 
