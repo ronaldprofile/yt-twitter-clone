@@ -105,6 +105,10 @@ export const EditProfile = styled(Button)`
   font-size: 15px;
   font-weight: 700;
 
+  &:hover {
+    background: var(--button-tweet-outlined-hover);
+  }
+
   @media (min-width: 320px) {
     padding: 10px 19px;
     top: 10px;
