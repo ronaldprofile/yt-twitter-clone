@@ -11,19 +11,12 @@ export const Button = styled.button<ButtonProps>`
   border-radius: 25px;
   border: 0;
 
-  background: ${props =>
-    props.outlined ? "transparent" : "var(--button-tweet)"};
-  color: ${props =>
-    props.outlined ? "var(--button-tweet-outlined)" : "var(--white)"};
-  border: ${props =>
-    props.outlined ? "1px solid var(--button-outlined-border)" : "none"};
+  background: ${({ outlined }) =>
+    outlined ? "transparent" : "var(--button-tweet)"};
+  color: ${({ outlined }) =>
+    outlined ? "var(--button-tweet-outlined)" : "var(--gray-d9)"};
+  border: ${({ outlined }) =>
+    outlined ? "1px solid var(--button-outlined-border)" : "none"};
   cursor: pointer;
   transition: background 0.2s;
-
-  &:hover {
-    background: ${props =>
-      props.outlined
-        ? "var(--button-tweet-outlined-hover)"
-        : "var(--button-tweet-hover)"};
-  }
 `;
