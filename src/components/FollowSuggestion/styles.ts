@@ -1,5 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Button } from "../Button";
+
+type FollowButtonProps = {
+  isFollowing?: boolean;
+};
 
 export const Container = styled.div`
   display: flex;
@@ -40,6 +44,39 @@ export const Info = styled.div`
   }
 `;
 
-export const FollowButton = styled(Button)`
+export const FollowButton = styled(Button)<FollowButtonProps>`
   padding: 6px 17px;
+
+  background: ${({ outlined }) =>
+    outlined === false && "var(--button-tweet-outlined)"};
+
+  &:hover {
+    background: ${({ isFollowing }) =>
+      isFollowing && "var(--button-unfollow-background)"};
+    border: ${({ isFollowing }) =>
+      isFollowing && "1px solid var(--button-unfollow-border-color)"};
+
+    ${({ isFollowing }) =>
+      isFollowing &&
+      css`
+        > span {
+          display: none;
+        }
+
+        .unfollow-span {
+          display: block;
+        }
+      `}
+  }
+
+  > span {
+    color: ${({ outlined }) =>
+      outlined === false && "var(--button-follow-color)"};
+  }
+
+  .unfollow-span {
+    display: none;
+
+    color: var(--button-unfollow-color);
+  }
 `;

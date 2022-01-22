@@ -1,3 +1,4 @@
+import { useCallback, useState } from "react";
 import { Container, Avatar, Info, FollowButton } from "./styles";
 
 type FollowSuggestionProps = {
@@ -6,6 +7,16 @@ type FollowSuggestionProps = {
 };
 
 export function FollowSuggestion({ name, nickname }: FollowSuggestionProps) {
+  const [isFollowing, setIsFollowing] = useState(false);
+
+  const followUser = useCallback(() => {
+    setIsFollowing(true);
+  }, []);
+
+  const UnFollowUser = useCallback(() => {
+    setIsFollowing(false);
+  }, []);
+
   return (
     <Container>
       <div>
@@ -16,7 +27,15 @@ export function FollowSuggestion({ name, nickname }: FollowSuggestionProps) {
           <span>{nickname}</span>
         </Info>
       </div>
-      <FollowButton outlined>Seguir</FollowButton>
+
+      <FollowButton
+        isFollowing={isFollowing}
+        outlined={isFollowing}
+        onClick={() => (isFollowing ? UnFollowUser() : followUser())}
+      >
+        <span>{isFollowing ? "Following" : "Follow"}</span>
+        <span className="unfollow-span">Unfollow</span>
+      </FollowButton>
     </Container>
   );
 }
