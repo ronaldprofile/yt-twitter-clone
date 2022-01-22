@@ -14,6 +14,10 @@ Clone da interface do Twitter totalmente responsivo usando ReactJS.
 - Styled Icons
 - React Sticky Box
 
+## Novidades
+
+- Interatividade no botão `follow`, tendo o mesmo comportamento do Twitter.
+
 ## Uso
 
 - clone o repositório com `git clone https://github.com/ronaldprofile/yt-twitter-clone.git`
