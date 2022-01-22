@@ -7,20 +7,22 @@ import {
   SearchWrapper,
   SearchInput,
   SearchIcon,
-  Body
+  Body,
+  ShowMoreButton
 } from "./styles";
 
 export function Sidebar() {
   return (
     <Container>
       <SearchWrapper>
-        <SearchInput placeholder="Buscar no twitter" />
+        <SearchInput placeholder="Search Twitter" />
         <SearchIcon />
       </SearchWrapper>
+
       <StickyBox>
         <Body>
           <List
-            title="O que está acontecendo"
+            title="What’s happening"
             elements={[
               <News
                 title="COVID-19 - LIVE"
@@ -41,24 +43,17 @@ export function Sidebar() {
               <News
                 title="Sports - LIVE"
                 description="Coutinho no Aston Villa"
-              />
+              />,
+              <ShowMoreButton>Show more</ShowMoreButton>
             ]}
           />
           <List
-            title="Quem seguir"
+            title="Who to follow"
             elements={[
               <FollowSuggestion name="Ronald Tomaz" nickname="@ronaldtmz_" />,
               <FollowSuggestion name="Neymar Junior" nickname="@neymarjnr_" />,
               <FollowSuggestion name="Toni Kroos" nickname="@tonikroos_" />,
-              <FollowSuggestion name="Ronald Tomaz" nickname="@ronaldtmz_" />,
-              <FollowSuggestion name="Neymar Junior" nickname="@neymarjnr_" />,
-              <FollowSuggestion name="Toni Kroos" nickname="@tonikroos_" />,
-              <FollowSuggestion name="Ronald Tomaz" nickname="@ronaldtmz_" />,
-              <FollowSuggestion name="Neymar Junior" nickname="@neymarjnr_" />,
-              <FollowSuggestion name="Toni Kroos" nickname="@tonikroos_" />,
-              <FollowSuggestion name="Ronald Tomaz" nickname="@ronaldtmz_" />,
-              <FollowSuggestion name="Neymar Junior" nickname="@neymarjnr_" />,
-              <FollowSuggestion name="Toni Kroos" nickname="@tonikroos_" />
+              <ShowMoreButton>Show more</ShowMoreButton>
             ]}
           />
         </Body>

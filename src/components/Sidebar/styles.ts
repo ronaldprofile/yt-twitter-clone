@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const SearchWrapper = styled.div`
   width: min(399px, 100%);
   max-height: 57px;
-  padding: 10px 24px;
+  padding: 12px 24px;
 
   position: fixed;
   top: 0;
@@ -25,11 +25,11 @@ export const SearchWrapper = styled.div`
 `;
 export const SearchInput = styled.input`
   width: 100%;
-  height: 39px;
+  height: 40px;
   padding: 0 10px 0 50px;
   background: var(--search);
 
-  font-size: 14px;
+  font-size: 15px;
 
   border: 1px solid var(--search);
   outline: 0;
@@ -43,13 +43,13 @@ export const SearchInput = styled.input`
     border-color: var(--twitter);
 
     ~ svg {
-      fill: var(--twitter);
+      stroke: var(--twitter);
     }
   }
 
   ~ svg {
     position: relative;
-    top: -33px;
+    top: -30px;
     left: 16px;
     z-index: 1;
     transition: 180ms ease-in-out;
@@ -57,18 +57,24 @@ export const SearchInput = styled.input`
 `;
 
 export const SearchIcon = styled(Search)`
-  width: 27px;
-  height: 27px;
-
-  fill: var(--gray);
+  width: 20px;
+  height: 20px;
 `;
+
 export const Body = styled.div`
-  padding: 57px 24px 200px;
+  padding: 57px 10px 200px 30px;
   margin-top: 3px;
   display: flex;
   flex-direction: column;
 
   > div + div {
-    margin-top: 15px;
+    margin-top: 16px;
   }
+`;
+
+export const ShowMoreButton = styled.a`
+  display: block;
+  color: var(--button-show-more-color);
+
+  font-size: 15px;
 `;
