@@ -3,7 +3,6 @@ export {
   Notifications,
   Email,
   FavoriteBorder,
-  Search,
   LocationOn,
   ExitToApp
 } from "styled-icons/material-outlined";
@@ -17,3 +16,4 @@ export { MoreCircle } from "styled-icons/fluentui-system-regular";
 export { MoreHorizontal } from "styled-icons/evaicons-solid";
 export { Hashtag } from "styled-icons/remix-editor";
 export { Bookmark } from "styled-icons/fluentui-system-regular";
+export { Search } from "styled-icons/feather";

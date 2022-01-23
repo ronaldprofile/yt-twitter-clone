@@ -27,10 +27,11 @@ export const GlobalStyles = createGlobalStyle`
     --button-tweet: #7856ff;
     --button-tweet-hover: #6c4de6;
 
+    --button-show-more-color: #1d9bf0;
+
     --button-unfollow-color: #f4212e;
     --button-unfollow-background: rgba(244, 33, 46, 0.1);
     --button-unfollow-border-color: rgb(103, 7, 15 );
-
 
     --button-tweet-outlined: #eff3f4;
     --button-tweet-outlined-hover: rgba(239, 243, 244, 0.1);
