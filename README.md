@@ -1,6 +1,6 @@
 <h1 align="center">Twitter Clone</h1>
 
-<img src="https://ik.imagekit.io/gczsuhmv3/screenshot-rocks_twitter.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642729624737" alt="screenshot"/>
+<img src="https://ik.imagekit.io/gczsuhmv3/screenshot-rocks__1__hJ6zAmFCyky.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642896299118" alt="screenshot"/>
 
 ## Projeto
 
